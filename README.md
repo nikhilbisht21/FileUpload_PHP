@@ -18,6 +18,6 @@ eg. If we get 200 as response in second iframe(This response will be generated b
   <dd>The uploaded files will be saved in this folder</dd>
 </dl>
 <br>
-<b>Languages Used:</b> PHP, JavaScript, Jquery
+<b>Languages Used:</b> PHP, JavaScript, Jquery<br>
 HTML, CSS and Bootstrap is used to design the web page
 
