@@ -1,8 +1,8 @@
 <?php
 
 try{
-    $name="new file";
-    $target_dir="uploads/";
+    $name="new file";   //changes name of the file uploaded
+    $target_dir="uploads/"; //directory where the files will be uploaded
     $temp=$_FILES["dcp"]["name"];
     $newname=explode(".",$temp);
     $target_file=$target_dir.$name.".".end($newname);
