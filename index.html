@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>File Upload</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Nikhil Bisht,nikhilsinghbisht21@gmail.com">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style type="text/css">
+        /*#if_b {
+            display: none;
+        }*/
+    </style>
+    <script type="text/javascript">
+        var iframe_aa, iframe_ab, iframe_ba, iframe_bb, innerDoc_a, innerDoc_b, ifb, stats;
+        ifb = 0;
+
+        function access_a() {
+            iframe_aa = $("#if_a").contents();
+            iframe_ab = document.getElementById("if_a");
+            innerDoc_a = iframe_ab.contentDocument || iframe_ab.contentWindow.document;
+
+            iframe_aa.find("#frm").submit(function() {
+                iframe_aa.find("#up_b").hide();
+                iframe_aa.find("#im").show();
+                iframe_aa.find("#d1").hide();
+                iframe_aa.find("#d2").hide();
+            });
+
+        }
+
+        function access_b() {
+            if (ifb == 1) {
+                iframe_ba = $("#if_b").contents();
+                iframe_bb = document.getElementById("if_b");
+                innerDoc_b = iframe_bb.contentDocument || iframe_bb.contentWindow.document;
+
+                stats = innerDoc_b.getElementById("h1").innerHTML;
+
+                if (stats == 200) {
+                    //iframe_aa.find("#up_a").prop("disabled", true);
+                    iframe_aa.find("#im").hide();
+                    iframe_aa.find("#d1").show();
+                    ups = 1;
+                } else {
+                    iframe_aa.find("#im").hide();
+                    iframe_aa.find("#up_b").show();
+                    innerDoc_a.getElementById("d21").innerHTML = stats;
+                    iframe_aa.find("#d2").show();
+                }
+            } else
+                ++ifb;
+        }
+    </script>
+</head>
+
+<body>
+    <iframe name="frame_a" id="if_a" frameborder="0" src="upload.html" onload="access_a()" style="height:260px;">
+        </iframe>
+    <iframe name="frame_b" id="if_b" frameborder="1" onload="access_b()">
+        </iframe>
+</body>
+
+</html>

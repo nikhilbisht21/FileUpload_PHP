@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Nikhil Bisht,nikhilsinghbisht21@gmail.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style type="text/css">
+        body {
+            overflow: hidden;
+            margin-left: -10px;
+            padding-top: 10px;
+            font-family: "Raleway", sans-serif
+        }
+        
+        #up_a {
+            border: 1px solid #a9a9a9;
+            border-radius: 3px;
+            width: 250px;
+            margin-bottom: 5px;
+        }
+        
+        #up_b {
+            display: block;
+            background: dodgerblue;
+            color: white;
+            padding-top: 3px;
+            padding-bottom: 3px;
+            border: 0px;
+            border-radius: 3px;
+            width: 80px;
+            margin-bottom: 10px;
+        }
+        
+        #up_b:hover {
+            background: limegreen;
+        }
+        
+        #im {
+            display: none;
+            height: 25px;
+            width: 25px;
+            margin-top: -2px;
+            margin-left: 25px;
+        }
+        
+        .d2 {
+            display: none;
+            padding-top: 3px;
+            padding-bottom: 3px;
+            padding-left: 5px;
+            padding-right: 5px;
+            border-radius: 3px;
+            margin-bottom: 5px;
+        }
+        
+        #d1 {
+            width: 250px;
+        }
+    </style>
+</head>
+
+<body style="background:transparent;">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <form id="frm" action="upload.php" method="post" enctype="multipart/form-data" target="frame_b">
+                    <input type="file" name="dcp" id="up_a" required>
+                    <button type="submit" name="upload" id="up_b">Upload <i class="fa fa-cloud-upload"></i></button><img id="im" src="giphya.gif">
+                </form>
+                <div class="d2 text-center bg-success text-success" id="d1">
+                    <i class="fa fa-check"></i> File Upload Successful
+                </div>
+                <div class="d2 text-center bg-danger text-danger" id="d2">
+                    <i class="fa fa-warning"></i> <span id="d21">Only .txt,.ppt,.pdf or .doc file is allowed</span>
+                </div>
+                <p id="p_a"> Upload your file with detailed description of your dream website ( Recommended )
+                    <ul>
+                        <li>File should be in .doc,.pdf,.ppt or .txt format</li>
+                        <li>File size should not be greater than 5mb</li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
